@@ -1,0 +1,11 @@
+<h1>Dog info</h1>
+<h2><%= @dog.name %></h2>
+Breed: <%= @dog.breed %><br>
+Age: <%= @dog.age %><br>
+
+<%= link_to "EDIT DOG", edit_dog_path(@dog) %>
+<%= form_for @dog, method: :delete do |f| %>
+<%= f.submit "DELETE DOG"%>
+<% end %>
+
+<%= render partial: "employees/employee", locals: {employees: @employees} %>

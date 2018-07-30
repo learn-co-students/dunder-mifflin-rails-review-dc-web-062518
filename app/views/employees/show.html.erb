@@ -1,0 +1,13 @@
+<h1>Employee</h1>
+<h2><%= "#{@employee.first_name} #{@employee.last_name}" %></h2>
+<%= image_tag @employee.img_url %>
+
+Alias: <%= @employee.alias %><br>
+Title: <%= @employee.title %><br>
+Office: <%= @employee.office %><br>
+
+
+<%= link_to "EDIT EMPLOYEE", edit_employee_path(@employee) %>
+<%= form_for @employee, method: :delete do |f| %>
+<%= f.submit "DELETE EMPLOYEE" %>
+<% end %>
